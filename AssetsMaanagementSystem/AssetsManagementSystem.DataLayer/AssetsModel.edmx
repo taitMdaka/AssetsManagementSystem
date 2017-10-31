@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AssetManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AssetsTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssetName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AssetDescription" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AssetSerialNumber" Type="int" Nullable="false" />
+          <Property Name="AssetTypeID" Type="int" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AssetSupplier" Type="varchar" MaxLength="50" />
+          <Property Name="isAllocated" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TypeofAssetTable">
+          <Key>
+            <PropertyRef Name="AssetTypeID" />
+          </Key>
+          <Property Name="AssetTypeID" Type="int" Nullable="false" />
+          <Property Name="AssetType" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__AssetsTab__Asset__38996AB5">
+          <End Role="TypeofAssetTable" Type="Self.TypeofAssetTable" Multiplicity="0..1" />
+          <End Role="AssetsTable" Type="Self.AssetsTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeofAssetTable">
+              <PropertyRef Name="AssetTypeID" />
+            </Principal>
+            <Dependent Role="AssetsTable">
+              <PropertyRef Name="AssetTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AssetManagementSystemModelStoreContainer">
+          <EntitySet Name="AssetsTable" EntityType="Self.AssetsTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeofAssetTable" EntityType="Self.TypeofAssetTable" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__AssetsTab__Asset__38996AB5" Association="Self.FK__AssetsTab__Asset__38996AB5">
+            <End Role="TypeofAssetTable" EntitySet="TypeofAssetTable" />
+            <End Role="AssetsTable" EntitySet="AssetsTable" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AssetManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AssetsTable">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssetName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssetDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssetSerialNumber" Type="Int32" Nullable="false" />
+          <Property Name="AssetTypeID" Type="Int32" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AssetSupplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isAllocated" Type="Boolean" />
+          <NavigationProperty Name="TypeofAssetTable" Relationship="Self.FK__AssetsTab__Asset__38996AB5" FromRole="AssetsTable" ToRole="TypeofAssetTable" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TypeofAssetTable">
+          <Key>
+            <PropertyRef Name="AssetTypeID" />
+          </Key>
+          <Property Name="AssetTypeID" Type="Int32" Nullable="false" />
+          <Property Name="AssetType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="AssetsTables" Relationship="Self.FK__AssetsTab__Asset__38996AB5" FromRole="TypeofAssetTable" ToRole="AssetsTable" />
+        </EntityType>
+        <Association Name="FK__AssetsTab__Asset__38996AB5">
+          <End Role="TypeofAssetTable" Type="Self.TypeofAssetTable" Multiplicity="0..1" />
+          <End Role="AssetsTable" Type="Self.AssetsTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeofAssetTable">
+              <PropertyRef Name="AssetTypeID" />
+            </Principal>
+            <Dependent Role="AssetsTable">
+              <PropertyRef Name="AssetTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AssetManagementSystemContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AssetsTables" EntityType="Self.AssetsTable" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TypeofAssetTables" EntityType="Self.TypeofAssetTable" />
+          <AssociationSet Name="FK__AssetsTab__Asset__38996AB5" Association="Self.FK__AssetsTab__Asset__38996AB5">
+            <End Role="TypeofAssetTable" EntitySet="TypeofAssetTables" />
+            <End Role="AssetsTable" EntitySet="AssetsTables" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AssetManagementSystemModelStoreContainer" CdmEntityContainer="AssetManagementSystemContext">
+          <EntitySetMapping Name="AssetsTables">
+            <EntityTypeMapping TypeName="AssetManagementSystemModel.AssetsTable">
+              <MappingFragment StoreEntitySet="AssetsTable">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AssetName" ColumnName="AssetName" />
+                <ScalarProperty Name="AssetDescription" ColumnName="AssetDescription" />
+                <ScalarProperty Name="AssetSerialNumber" ColumnName="AssetSerialNumber" />
+                <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="AssetSupplier" ColumnName="AssetSupplier" />
+                <ScalarProperty Name="isAllocated" ColumnName="isAllocated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AssetManagementSystemModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeofAssetTables">
+            <EntityTypeMapping TypeName="AssetManagementSystemModel.TypeofAssetTable">
+              <MappingFragment StoreEntitySet="TypeofAssetTable">
+                <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+                <ScalarProperty Name="AssetType" ColumnName="AssetType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
