@@ -51,8 +51,12 @@
   <ItemGroup>
     <Compile Include="Base.cs" />
     <Compile Include="Concrete\InsertAsset.cs" />
+    <Compile Include="Concrete\ListAssets.cs" />
+    <Compile Include="Concrete\UpdateAssets.cs" />
     <Compile Include="DTO\AssetsDTO.cs" />
     <Compile Include="Interface\IInsertAsset.cs" />
+    <Compile Include="Interface\IList.cs" />
+    <Compile Include="Interface\IUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

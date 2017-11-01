@@ -25,8 +25,6 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
                 AssetTypeID = asset.AssetTypeID,
                 isAllocated = asset.isAllocated,
                 AssetSupplier = asset.AssetSupplier
-
-
             };
 
             db.AssetsTables.Add(assetTable);
