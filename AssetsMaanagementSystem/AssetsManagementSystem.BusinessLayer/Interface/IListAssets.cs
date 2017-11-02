@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace AssetsManagementSystem.BusinessLayer.Interface
 {
-    public interface IList
+    public interface IListAssets
     {
-        List<AssetsDTO> GetUsers();
+        List<AssetsDTO> GetAssets();
     }
 }

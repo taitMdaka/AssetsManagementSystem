@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace AssetsManagementSystem.BusinessLayer.Interface
 {
-    public interface IInsertAsset
+    public interface IDeleteAssets
     {
-        void AddAsset(AssetsDTO asset);
+
+        void deleteasset(AssetsDTO asset);
     }
 }

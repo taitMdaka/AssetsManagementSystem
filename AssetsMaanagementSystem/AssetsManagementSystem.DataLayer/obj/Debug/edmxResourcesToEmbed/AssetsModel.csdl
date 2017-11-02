@@ -13,6 +13,7 @@
     <Property Name="AssetSupplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="isAllocated" Type="Boolean" />
     <NavigationProperty Name="TypeofAssetTable" Relationship="Self.FK__AssetsTab__Asset__38996AB5" FromRole="AssetsTable" ToRole="TypeofAssetTable" />
+    <Property Name="isDeleted" Type="Boolean" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>

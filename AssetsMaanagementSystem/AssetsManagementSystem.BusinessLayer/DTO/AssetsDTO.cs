@@ -16,5 +16,6 @@ namespace AssetsManagementSystem.BusinessLayer.DTO
         public string Brand { get; set; }
         public string AssetSupplier { get; set; }
         public bool? isAllocated { get; set; }
+        public bool? isDeleted { get; set; }
     }
 }

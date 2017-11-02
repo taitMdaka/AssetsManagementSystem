@@ -4,6 +4,7 @@
     <EntitySetMapping Name="AssetsTables">
       <EntityTypeMapping TypeName="AssetManagementSystemModel.AssetsTable">
         <MappingFragment StoreEntitySet="AssetsTable">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AssetName" ColumnName="AssetName" />
           <ScalarProperty Name="AssetDescription" ColumnName="AssetDescription" />

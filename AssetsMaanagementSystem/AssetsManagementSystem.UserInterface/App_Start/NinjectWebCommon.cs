@@ -64,8 +64,11 @@ namespace AssetsManagementSystem.UserInterface.App_Start
         private static void RegisterServices(IKernel kernel)
         {
 
+
             //we want to bind the interface to concrete class 
             kernel.Bind<IInsertAsset>().To<InsertAsset>();
+            kernel.Bind<IListAssets>().To<ListAssets>();
+
         }
     }
 }

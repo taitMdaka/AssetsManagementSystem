@@ -12,6 +12,7 @@
     <Property Name="Brand" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="AssetSupplier" Type="varchar" MaxLength="50" />
     <Property Name="isAllocated" Type="bit" />
+    <Property Name="isDeleted" Type="bit" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -27,7 +28,7 @@
     <Key>
       <PropertyRef Name="AssetTypeID" />
     </Key>
-    <Property Name="AssetTypeID" Type="int" Nullable="false" />
+    <Property Name="AssetTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="AssetType" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK__AssetsTab__Asset__38996AB5">

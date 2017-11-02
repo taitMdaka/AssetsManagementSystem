@@ -15,6 +15,8 @@ C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\AssetsManagementSystem.UserInterface.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\AssetsManagementSystem.UserInterface.pdb
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\AssetsManagementSystem.BusinessLayer.dll
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\EntityFramework.dll
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\EntityFramework.SqlServer.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -35,8 +37,9 @@ C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\System.Web.Webpages.Razor.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\WebActivatorEx.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\AssetsManagementSystem.DataLayer.dll
-C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\EntityFramework.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\AssetsManagementSystem.BusinessLayer.pdb
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\EntityFramework.xml
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\EntityFramework.SqlServer.xml
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\Microsoft.AI.Web.xml
@@ -53,7 +56,6 @@ C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\System.Web.Helpers.xml
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\System.Web.Mvc.xml
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\AssetsManagementSystem.DataLayer.pdb
-C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\bin\EntityFramework.xml
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\obj\Debug\AssetsManagementSystem.UserInterface.csprojResolveAssemblyReference.cache
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\obj\Debug\AssetsManagementSystem.UserInterface.dll
 C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.UserInterface\obj\Debug\AssetsManagementSystem.UserInterface.pdb

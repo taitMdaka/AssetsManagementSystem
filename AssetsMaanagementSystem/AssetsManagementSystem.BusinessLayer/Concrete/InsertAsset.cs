@@ -24,9 +24,10 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
                 AssetSerialNumber = asset.AssetSerialNumber,
                 AssetTypeID = asset.AssetTypeID,
                 isAllocated = asset.isAllocated,
-                AssetSupplier = asset.AssetSupplier
-            };
+                AssetSupplier = asset.AssetSupplier,
+                isDeleted = false
 
+            };
             db.AssetsTables.Add(assetTable);
             db.SaveChanges();
         }

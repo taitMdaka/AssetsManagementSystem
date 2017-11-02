@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AssetManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AssetManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AssetsTable">
           <Key>
             <PropertyRef Name="ID" />
@@ -17,6 +17,7 @@
           <Property Name="Brand" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="AssetSupplier" Type="varchar" MaxLength="50" />
           <Property Name="isAllocated" Type="bit" />
+          <Property Name="isDeleted" Type="bit" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -32,7 +33,7 @@
           <Key>
             <PropertyRef Name="AssetTypeID" />
           </Key>
-          <Property Name="AssetTypeID" Type="int" Nullable="false" />
+          <Property Name="AssetTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AssetType" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK__AssetsTab__Asset__38996AB5">
@@ -56,8 +57,7 @@
             <End Role="AssetsTable" EntitySet="AssetsTable" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AssetManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -74,6 +74,7 @@
           <Property Name="AssetSupplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="isAllocated" Type="Boolean" />
           <NavigationProperty Name="TypeofAssetTable" Relationship="Self.FK__AssetsTab__Asset__38996AB5" FromRole="AssetsTable" ToRole="TypeofAssetTable" />
+          <Property Name="isDeleted" Type="Boolean" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -123,6 +124,7 @@
           <EntitySetMapping Name="AssetsTables">
             <EntityTypeMapping TypeName="AssetManagementSystemModel.AssetsTable">
               <MappingFragment StoreEntitySet="AssetsTable">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AssetName" ColumnName="AssetName" />
                 <ScalarProperty Name="AssetDescription" ColumnName="AssetDescription" />

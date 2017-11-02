@@ -22,6 +22,7 @@ namespace AssetsManagementSystem.DataLayer
         public string Brand { get; set; }
         public string AssetSupplier { get; set; }
         public Nullable<bool> isAllocated { get; set; }
+        public Nullable<bool> isDeleted { get; set; }
     
         public virtual TypeofAssetTable TypeofAssetTable { get; set; }
     }
