@@ -10,37 +10,25 @@ using System.Threading.Tasks;
 
 namespace AssetsManagementSystem.BusinessLayer.Concrete
 {
-
     public class ListAssets : Base, IListAssets
     {
+
         public List<AssetsDTO> GetAssets()
         {
-            var temp = new List<AssetsDTO>();
 
-            using (var db = new AssetManagementSystemContext())
+            // return db.Provinces.Select(x => new ProvinceDTO { ProvinceId = x.ProvinceId, ProvinceName = x.ProvinceName }).ToList();
+            return db.AssetsTables.Select(x => new AssetsDTO
             {
-                //   return db.UserProfiles.Where(x => x.UserProfileId == ID).Select(user => new UserProfileDTO
-
-                {
-                    return temp = db.AssetsTables.Where(x => x.ID != 0).Select(x => new AssetsDTO
-                    {
-                        ID = x.ID,
-                        AssetDescription = x.AssetDescription,
-                        AssetName = x.AssetName,
-                        AssetSerialNumber = x.AssetSerialNumber,
-                        AssetSupplier = x.AssetSupplier,
-                        AssetTypeID = x.AssetTypeID,
-                        Brand = x.Brand,
-                        isAllocated = x.isAllocated
-                    }).ToList();
-
-                }
-                //still need to check the returning lists 
-                //return temp;
-            }
-
+                AssetDescription = x.AssetDescription,
+                AssetName = x.AssetName,
+                AssetSerialNumber = x.AssetSerialNumber,
+                AssetSupplier = x.AssetSupplier,
+                AssetTypeID = x.AssetTypeID,
+                Brand = x.Brand,
+                isAllocated = x.isAllocated
+            })
+                .ToList();
         }
     }
+
 }
-
-

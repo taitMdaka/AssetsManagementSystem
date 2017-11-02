@@ -20,9 +20,10 @@ namespace AssetsManagementSystem.UserInterface.Controllers
         {
             _IInsertAsset = iInsertAsset;
             _IListAssets = iListAssets;
+
         }
 
-        // Get list assets 
+        // Get list Assets 
         public ActionResult Liasassets()
         {
             return View();
@@ -46,7 +47,7 @@ namespace AssetsManagementSystem.UserInterface.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Liasassets(AssetsDTO)
+        public ActionResult Liasassets(AssetsDTO liasassets)
         {
             //calling mymethod from BL 
             // InsertAsset addassets = new InsertAsset();
@@ -54,11 +55,9 @@ namespace AssetsManagementSystem.UserInterface.Controllers
             _IListAssets.GetAssets();
             //_IInsertAsset.AddAsset(asset);
             //clear my assetsDTO 
-            ModelState.Clear();
+
             return View();
+
         }
-
-
-
     }
 }
