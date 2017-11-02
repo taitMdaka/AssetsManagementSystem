@@ -1,0 +1,10 @@
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\bin\Debug\AssetsManagementSystem.DataLayer.dll.config
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\bin\Debug\AssetsManagementSystem.DataLayer.dll
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\bin\Debug\AssetsManagementSystem.DataLayer.pdb
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\obj\Debug\AssetsManagementSystem.DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\obj\Debug\AssetsManagementSystem.DataLayer.dll
+C:\Users\TMdaka\Documents\Assets\AssetsMaanagementSystem\AssetsManagementSystem.DataLayer\obj\Debug\AssetsManagementSystem.DataLayer.pdb

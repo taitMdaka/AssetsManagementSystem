@@ -14,7 +14,7 @@ namespace AssetsManagementSystem.UserInterface.Controllers
         //creating a private field
         private IInsertAsset _IInsertAsset;
         private IListAssets _IListAssets;
-
+        a
 
         public ManageAssetsController(IInsertAsset iInsertAsset, IListAssets iListAssets)
         {
@@ -24,9 +24,11 @@ namespace AssetsManagementSystem.UserInterface.Controllers
         }
 
         // Get list Assets 
-        public ActionResult Liasassets()
+        public ActionResult GetAssets()
         {
-            return View();
+            // _IListAssets = new ListAssets();
+            var allAssets = _IListAssets.GetAssets();
+            return View(allAssets);
         }
 
         // GET: add assets 
@@ -47,12 +49,9 @@ namespace AssetsManagementSystem.UserInterface.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Liasassets(AssetsDTO liasassets)
+        public ActionResult GetAsset(AssetsDTO GetAsset)
         {
-            //calling mymethod from BL 
-            // InsertAsset addassets = new InsertAsset();
-            //addassets.AddAsset(asset);
-            _IListAssets.GetAssets();
+            // _IListAssets.GetAssets();
             //_IInsertAsset.AddAsset(asset);
             //clear my assetsDTO 
 

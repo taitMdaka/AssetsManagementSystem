@@ -1,0 +1,83 @@
+﻿@model IEnumerable<AssetsManagementSystem.BusinessLayer.DTO.AssetsDTO>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetAssets</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetSerialNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetTypeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssetSupplier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isAllocated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isDeleted)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetSerialNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetTypeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetSupplier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isAllocated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isDeleted)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
