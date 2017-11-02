@@ -186,6 +186,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ManageAssets\AddAssest.cshtml" />
     <Content Include="Views\ManageAssets\GetAssets.cshtml" />
+    <Content Include="Views\ManageAssets\UpdateAssets.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

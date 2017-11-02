@@ -14,13 +14,14 @@ namespace AssetsManagementSystem.UserInterface.Controllers
         //creating a private field
         private IInsertAsset _IInsertAsset;
         private IListAssets _IListAssets;
-        a
+        private IUpdate _IUpdate;
 
-        public ManageAssetsController(IInsertAsset iInsertAsset, IListAssets iListAssets)
+
+        public ManageAssetsController(IInsertAsset iInsertAsset, IListAssets iListAssets, IUpdate iUpdatAssets)
         {
             _IInsertAsset = iInsertAsset;
             _IListAssets = iListAssets;
-
+            _IUpdate = iUpdatAssets;
         }
 
         // Get list Assets 
@@ -40,23 +41,42 @@ namespace AssetsManagementSystem.UserInterface.Controllers
         [HttpPost]
         public ActionResult AddAssest(AssetsDTO asset)
         {
-            //calling mymethod from BL 
-            // InsertAsset addassets = new InsertAsset();
-            //addassets.AddAsset(asset);
             _IInsertAsset.AddAsset(asset);
             //clear my assetsDTO 
             ModelState.Clear();
             return View();
         }
+
         [HttpGet]
         public ActionResult GetAsset(AssetsDTO GetAsset)
         {
-            // _IListAssets.GetAssets();
-            //_IInsertAsset.AddAsset(asset);
-            //clear my assetsDTO 
-
             return View();
+        }
+
+
+        public ActionResult UpdateAssets()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult UpdateAssets(AssetsDTO EditAsset)
+        {
+            try
+            {
+                _IUpdate.updateassets(EditAsset);
+                ModelState.Clear();
+                ViewBag.Success = "Good";
+                return View("UpdateAssets");
+            }
+            catch (Exception)
+            {
+
+                ViewBag.Error = "Error with Updating";
+                return View();
+            }
+
 
         }
+
     }
 }

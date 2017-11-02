@@ -10,5 +10,6 @@ namespace AssetsManagementSystem.BusinessLayer.Interface
     public interface IUpdate
     {
         void updateassets(AssetsDTO assets);
+        // void updateassets(object assets);
     }
 }

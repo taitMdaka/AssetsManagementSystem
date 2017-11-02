@@ -68,6 +68,7 @@ namespace AssetsManagementSystem.UserInterface.App_Start
             //we want to bind the interface to concrete class 
             kernel.Bind<IInsertAsset>().To<InsertAsset>();
             kernel.Bind<IListAssets>().To<ListAssets>();
+            kernel.Bind<IUpdate>().To<UpdateAssets>();
 
         }
     }
