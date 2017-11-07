@@ -9,7 +9,6 @@ namespace AssetsManagementSystem.BusinessLayer.Interface
 {
     public interface IDeleteAssets
     {
-
         void deleteasset(AssetsDTO asset);
     }
 }

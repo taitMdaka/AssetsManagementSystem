@@ -69,6 +69,8 @@ namespace AssetsManagementSystem.UserInterface.App_Start
             kernel.Bind<IInsertAsset>().To<InsertAsset>();
             kernel.Bind<IListAssets>().To<ListAssets>();
             kernel.Bind<IUpdate>().To<UpdateAssets>();
+            kernel.Bind<IListType>().To<AssetsListTypes>();
+
 
         }
     }

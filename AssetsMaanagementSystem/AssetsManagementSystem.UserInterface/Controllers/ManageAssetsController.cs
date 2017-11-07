@@ -15,13 +15,13 @@ namespace AssetsManagementSystem.UserInterface.Controllers
         private IInsertAsset _IInsertAsset;
         private IListAssets _IListAssets;
         private IUpdate _IUpdate;
-
-
-        public ManageAssetsController(IInsertAsset iInsertAsset, IListAssets iListAssets, IUpdate iUpdatAssets)
+        private IListType _IlistType;
+        public ManageAssetsController(IInsertAsset iInsertAsset, IListAssets iListAssets, IUpdate iUpdatAssets, IListType ilistType)
         {
             _IInsertAsset = iInsertAsset;
             _IListAssets = iListAssets;
             _IUpdate = iUpdatAssets;
+            _IlistType = ilistType;
         }
 
         // Get list Assets 
@@ -31,7 +31,6 @@ namespace AssetsManagementSystem.UserInterface.Controllers
             var allAssets = _IListAssets.GetAssets();
             return View(allAssets);
         }
-
         // GET: add assets 
         public ActionResult AddAssest()
         {
@@ -53,7 +52,6 @@ namespace AssetsManagementSystem.UserInterface.Controllers
             return View();
         }
 
-
         public ActionResult UpdateAssets()
         {
             return View();
@@ -70,13 +68,26 @@ namespace AssetsManagementSystem.UserInterface.Controllers
             }
             catch (Exception)
             {
-
                 ViewBag.Error = "Error with Updating";
                 return View();
             }
-
-
         }
+
+        //getting assets type list 
+        [HttpGet]
+        public ActionResult getassetstype(AssetsDTO getassetstype)
+        {
+            return View();
+        }
+
+        public ActionResult getassetstype()
+        {
+            return View();
+        }
+
+
 
     }
 }
+
+

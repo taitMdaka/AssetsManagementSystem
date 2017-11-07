@@ -13,13 +13,9 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
     {
         public void deleteasset(AssetsDTO asset)
         {
-            //1. Get student from DB
-
             var assetToDelete = db.AssetsTables.Find(asset.ID);
             db.AssetsTables.Remove(assetToDelete);
             db.SaveChanges();
-
-
         }
     }
 }

@@ -43,41 +43,41 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssetName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssetDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssetSerialNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssetTypeID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AssetSupplier)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.isAllocated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.isDeleted)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssetDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssetSerialNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssetTypeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssetSupplier)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isAllocated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isDeleted)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
     </table>
 </body>
 </html>

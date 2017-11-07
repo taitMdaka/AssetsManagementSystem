@@ -12,10 +12,8 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
 {
     public class ListAssets : Base, IListAssets
     {
-
         public List<AssetsDTO> GetAssets()
         {
-
             // return db.Provinces.Select(x => new ProvinceDTO { ProvinceId = x.ProvinceId, ProvinceName = x.ProvinceName }).ToList();
             return db.AssetsTables.Select(x => new AssetsDTO
             {
@@ -30,5 +28,4 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
                 .ToList();
         }
     }
-
 }

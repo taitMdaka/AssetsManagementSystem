@@ -13,7 +13,6 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
     {
         public void AddAsset(AssetsDTO asset)
         {
-
             //using disposes an intance after a scope 
             //AssetManagementSystemContext db = new AssetManagementSystemContext();
             AssetsTable assetTable = new AssetsTable
@@ -26,7 +25,6 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
                 isAllocated = asset.isAllocated,
                 AssetSupplier = asset.AssetSupplier,
                 isDeleted = false
-
             };
             db.AssetsTables.Add(assetTable);
             db.SaveChanges();

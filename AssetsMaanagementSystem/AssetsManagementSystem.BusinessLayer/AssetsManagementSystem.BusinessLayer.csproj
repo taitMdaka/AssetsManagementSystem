@@ -50,14 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base.cs" />
+    <Compile Include="Concrete\AssetsListTypes.cs" />
     <Compile Include="Concrete\DeleteAssets.cs" />
     <Compile Include="Concrete\InsertAsset.cs" />
     <Compile Include="Concrete\ListAssets.cs" />
     <Compile Include="Concrete\UpdateAssets.cs" />
     <Compile Include="DTO\AssetsDTO.cs" />
+    <Compile Include="DTO\AssetsTypeDTO.cs" />
+    <Compile Include="DTO\keyAttribute.cs" />
     <Compile Include="Interface\IDeleteAssets.cs" />
     <Compile Include="Interface\IInsertAsset.cs" />
     <Compile Include="Interface\IListAssets.cs" />
+    <Compile Include="Interface\IListType.cs" />
     <Compile Include="Interface\IUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

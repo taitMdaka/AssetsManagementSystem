@@ -10,16 +10,13 @@ using AssetsManagementSystem.DataLayer;
 namespace AssetsManagementSystem.BusinessLayer.Concrete
 {
     public class UpdateAssets : Base, IUpdate
-
     {
         public void updateassets(AssetsDTO asset)
         {
-
             try
             {
                 if (db.AssetsTables.Any(a => a.ID == asset.ID))
                 {
-
                     AssetsTable assetTable = new AssetsTable
                     {
                         ID = asset.ID,
@@ -31,19 +28,15 @@ namespace AssetsManagementSystem.BusinessLayer.Concrete
                         isAllocated = asset.isAllocated,
                         AssetSupplier = asset.AssetSupplier,
                         isDeleted = asset.isDeleted
-
                     };
-
                     db.Entry(assetTable).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 }
             }
             catch (Exception)
             {
-
                 throw;
             }
-
         }
     }
 }
